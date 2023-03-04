@@ -1,0 +1,15 @@
+ALGORITHM IsPalindrome
+//ici nous avons notre fonction avec la variable mot qui est nôtre chaîne de caractères.
+FUNCTION isPalindrome(pal : STRING) : BOOLEAN 
+Var
+  pal := STRING
+BEGIN
+  IF Length(pal <= 1) THEN // nous vérifions si la longueur de notre chaîne est inférieure ou égal à 1
+    IsPalindrome := TRUE // si c'est vrai la chaîne est palindrome.
+  ELSE_IF pal[1] := pal[Length(pal)] THEN /* si oui nous découpons la chaîne en dessous chaîne commençant , à la position deux pour exclure le premier et de longueur n-2 pour exclure le dernier, et on continue recommence à l'étape 1.*/
+    IsPalindrome := IsPalindrome(Copy(pal, 2, Length(pal) - 2)) // recursive case: compare first and last characters, then call function recursively
+  ELSE
+    isPalindrome := FALSE; // si non elle n'est pas palindrome.
+    END_IF;
+END;
+
