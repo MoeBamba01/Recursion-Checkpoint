@@ -1,5 +1,5 @@
 ALGORITHM IsPalindrome
-//ici nous avons notre fonction avec la variable mot qui est nôtre chaîne de caractères.
+//ici nous avons notre fonction avec la variable pal qui est nôtre chaîne de caractères.
 FUNCTION isPalindrome(pal : STRING) : BOOLEAN 
 Var
   pal := STRING
